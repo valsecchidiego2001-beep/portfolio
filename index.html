@@ -1,0 +1,535 @@
+<<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Valsecchi</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+   
+    #chi-sono{
+width:100%;
+min-height:100vh;
+background:#05081a;
+}
+
+.about-container{
+display:flex;
+min-height:100vh;
+}
+
+.about-image{
+width:50%;
+}
+
+.about-image img{
+width:100%;
+height:100vh;
+object-fit:cover;
+}
+
+.about-text{
+width:50%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:100px 120px;
+text-align: justify;
+hyphens: auto;
+}
+
+.about-text h2{
+font-family:'Cormorant Garamond', serif;
+font-size:3rem;
+margin-bottom:30px;
+}
+
+.about-text p{
+font-size:1.05rem;
+line-height:1.9;
+color:#b8b8b8;
+margin-bottom:20px;
+max-width:520px;
+}
+ html {
+  scroll-behavior: smooth;
+}
+
+#portfolio {
+  background: #05081a;
+  padding: 60px 0 120px;
+}
+
+.apple-project {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.apple-image-wrap {
+  position: relative;
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 90vh;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.apple-image-wrap img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.03);
+}
+
+.apple-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 70px 60px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    rgba(0, 0, 0, 0.12) 65%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+}
+
+.apple-overlay h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-bottom: 22px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.apple-overlay p {
+  max-width: 950px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* animazione elegante all'apertura */
+.apple-image-wrap,
+.apple-overlay h2,
+.apple-overlay p {
+  animation: fadeUp 1s ease both;
+}
+
+.apple-overlay h2 {
+  animation-delay: 0.15s;
+}
+
+.apple-overlay p {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .apple-image-wrap {
+    width: 94%;
+    min-height: 80vh;
+  }
+
+  .apple-image-wrap img {
+    height: 80vh;
+  }
+
+  .apple-overlay {
+    padding: 50px 35px;
+  }
+
+  .apple-overlay h2 {
+    font-size: 2.8rem;
+  }
+
+  .apple-overlay p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  #portfolio {
+    padding: 30px 0 80px;
+  }
+
+  .apple-project {
+    padding: 20px 0;
+  }
+
+  .apple-image-wrap {
+    width: 95%;
+    min-height: 72vh;
+    border-radius: 20px;
+  }
+
+  .apple-image-wrap img {
+    height: 72vh;
+  }
+
+  .apple-overlay {
+    justify-content: flex-end;
+    padding: 28px 20px;
+  }
+
+  .apple-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .apple-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* FORMATTazione CONDIZIONALE */
+
+.project.alt .project-description{
+text-align:right;
+}
+    
+
+
+
+    html {
+     scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #05081a;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .gallery {
+      width: 50%;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 33.333%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      width: 50%;
+      background: #05081a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content-inner {
+      max-width: 520px;
+      width: 100%;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #b8b8b8;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e9e9e9;
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 14px 34px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.3s ease;
+      margin-bottom: 34px;
+    }
+
+    .btn:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .socials a {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #f1f1f1;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s ease;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .socials a:hover {
+      transform: translateY(-3px);
+      background: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .gallery,
+      .content {
+        width: 100%;
+      }
+
+      .gallery {
+        height: 55vh;
+      }
+
+      .content {
+        min-height: 45vh;
+        padding: 60px 25px;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        height: 48vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+      }
+
+      .socials a {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <!-- PARTE SINISTRA: 3 IMMAGINI VERTICALI -->
+    <div class="gallery">
+      <img src="MSK.jpeg">
+      <img src="KAPPA.jpeg">
+      <img src="KAPPA1.jpeg">
+    </div>
+
+    <!-- PARTE DESTRA: TESTO -->
+    <div class="content">
+      <div class="content-inner">
+        <h1>DIEGO VALSECCHI</h1>
+
+        <p class="subtitle">
+          EVENT MANAGER | COMMUNICATION SPECIALIST FREELANCE
+        </p>
+
+        <a href="#portfolio" class="btn">MY DIMENSION</a>
+
+        <a href="frontofhouse.html" class="btn">FRONT OF HOUSE</a>
+        
+
+        <div class="socials">
+  <a href="www.linkedin.com/in/diego-valsecchi-tesan-b819061b1" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+  <a href="mailto:valsecchi.diego@outlook.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://wa.me/393202688295" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+      </div>
+    </div>
+  </section>
+<section id="portfolio">
+
+  <section class="apple-project">
+    <div class="apple-image-wrap">
+      <img src="KAPPA3.jpeg" alt="Kappa FuturFestival">
+      <div class="apple-overlay">
+        <h2>KAPPA FUTURFESTIVAL</h2>
+        <p>
+          In the context of one of the beating hearts of electronic music on a global scale, I take part in the organizational machinery that makes the festival possible. Among the industrial architectures of Parco Dora and the energy of an international audience, I handle access management and shipments during the setup, event, and dismantling phases, as well as coordinating staff accreditation. My role fits into the delicate logistical balance that supports the event, contributing to the transformation of urban space into a large shared stage of music, people, and movement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apple-project">
+    <div class="apple-image-wrap">
+      <img src="MSK2 (1).jpeg" alt="Milano Skating Arena">
+      <div class="apple-overlay">
+        <h2>MILANO SKATING ARENA</h2>
+        <p>
+          In the context of the preparations for the Milano–Cortina 2026 Winter Olympics, I took part in logistical operations at the Milano Skating Arena. As Venue Logistic Supplier Manager, I coordinated workforce and vehicles during the venue setup phase, contributing to the management of logistical flows and the coordination between the different suppliers involved in creating the space designated for the Olympic competitions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apple-project">
+    <div class="apple-image-wrap">
+      <img src="VILLAGGIO.jpeg" alt="Olympic & Paralympic Village Milano">
+      <div class="apple-overlay">
+        <h2>OLYMPIC & PARALYMPIC VILLAGE MILANO</h2>
+        <p>
+          Within the framework of the Milano–Cortina 2026 Winter Olympics and Paralympic Games, I also took part in the logistical operations of the Olympic & Paralympic Village of Milan.
+          As Venue Logistic Supplier Manager, I coordinated workforce and material-handling vehicles within the venue during the setup, event, and dismantling phases of the village, as well as overseeing the bump-in and bump-out operations of the installations. In this context, the work contributed to the creation of a space dedicated to athletes, the true heart of the Olympic experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apple-project">
+    <div class="apple-image-wrap">
+      <img src="FISU.jpeg" alt="Olympic & Paralympic Village Milano">
+      <div class="apple-overlay">
+        <h2>FISU WORLD UNIVERSITY GAMES</h2>
+        <p>
+          In the context of the FISU World University Games, one of the largest multidisciplinary sporting events dedicated to university athletes from all over the world, I served as Education Projects Coordinator.
+          Within an event that brings together sport, culture, and international exchange, I contributed to the development and coordination of educational projects designed to enrich the experience of athletes and delegations beyond the sporting competition. My work focused on the planning and management of educational activities, collaboration with institutional partners, and operational support for educational initiatives, helping to transform the university games into a space for encounter, learning, and dialogue among young people from diverse cultural and social backgrounds.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apple-project">
+    <div class="apple-image-wrap">
+      <img src="SPECIAL OLYMPICS.jpeg" alt="Olympic & Paralympic Village Milano">
+      <div class="apple-overlay">
+        <h2>SPECIAL OLYMPICS WORLD WINTER GAMES</h2>
+        <p>
+         During the Special Olympics World Winter Games, a major international winter sports event that brought together more than 1,500 athletes from over 100 countries competing across eight disciplines, celebrating inclusion, passion, and sportsmanship in the heart of Piedmont, between Turin and the Italian Alpine venues, I served as Venue Media & Broadcast Manager.
+         In this role, I coordinated all activities related to crew access, media operations, and broadcast flow management within the venue, ensuring that the audiovisual coverage of the event was efficient and supported by solid logistical planning. My work facilitated collaboration between technical teams, international media, and organizational partners, enabling the smooth transmission of the most significant moments of the Games and supporting the storytelling of an event that brings together sport, humanity, and global visibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</section>
+<section id="chi-sono">
+
+<div class="about-container">
+
+<div class="about-image">
+<img src="PROFILE.jpeg">
+</div>
+
+<div class="about-text">
+
+<h2>ABOUT ME</h2>
+
+<p>
+ I work in event organization and logistics, operating in dynamic and complex environments where coordination, precision, and adaptability are essential. Over the years, I have had the opportunity to work across major international events, music festivals, and sport-related projects, contexts in which the work behind the scenes becomes what allows the final experience to take shape.
+</p>
+
+<p>
+ In my work, I mainly focus on logistical and operational aspects: managing flows, coordinating the workforce, and collaborating with suppliers and technical teams. I enjoy working at the intersection of organization and operations, where every detail contributes to making a larger system function smoothly.
+</p>
+
+<p>
+ I’m a creative, a thinker, a perfectionist; who enjoys thinking outside the box and finding new solutions to the problems that inevitably arise during the realization of an event. For me, every project is a balance between organization, people, and spaces: the goal is always to ensure that everything runs smoothly, even as complexity grows. And of course, having fun during the process.
+</p>
+
+</div>
+
+</div>
+
+</section>
+</body>
+</html>
